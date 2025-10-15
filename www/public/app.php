@@ -11,7 +11,8 @@ $manager = getMongoDbManager();
 
 // @todo implementez la récupération des données dans la variable $list
 // petite aide : https://github.com/VSG24/mongodb-php-examples
-$list = [['name' => 'test']];
+
+$list = $manager->selectCollection('tp')->find([])->toArray();
 
 // render template
 try {
